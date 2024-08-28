@@ -17,7 +17,7 @@ Copy the repository location and choose a desired path on your PC. <br/>
 
 
 Click on "clone" and you're all set, **code away!**<br/>
-note: MAKE SURE TO SET THE CONFIGURATION TO x86 IF IT'S NOT ALREADY SET TO THAT, AS TAHMLIB HAS ONLY BEEN SET UP FOR 32 BITS AT THE MOMENT
+note: MAKE SURE TO SET THE CONFIGURATION TO x86 IF IT'S NOT ALREADY SET TO THAT, AS TAHMLIB HAS ONLY BEEN SET UP FOR 32 BIT AT THE MOMENT
 
 <br/>
 
