@@ -13,9 +13,11 @@ tahmlib was made with Visual Studio 2022. It uses the "Desktop Development with 
 
 
 Copy the repository location and choose a desired path on your PC. <br/>
-![image](https://github.com/user-attachments/assets/8d2f069d-c400-4b49-8b4f-1e57391fb934)
+![image](https://github.com/user-attachments/assets/8d2f069d-c400-4b49-8b4f-1e57391fb934)<br/>
 
-Click on "clone" and you're all set, **code away!**
+
+Click on "clone" and you're all set, **code away!**<br/>
+note: MAKE SURE TO SET THE CONFIGURATION TO x86 IF IT'S NOT ALREADY SET TO THAT, AS TAHMLIB HAS ONLY BEEN SET UP FOR 32 BITS AT THE MOMENT
 
 <br/>
 
