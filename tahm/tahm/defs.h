@@ -1,6 +1,18 @@
 #pragma once
 
-// macros for ease of use
+/*
+		tahmlib
+		A C++ library for Game Development
+
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Macros --
+
+		Macros used by tahmlib.
+*/
+
+
 
 #define Rect SDL_Rect
 

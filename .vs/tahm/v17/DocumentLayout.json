@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\files\\projects\\git\\tahm\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\files\\projects\\git\\tahm\\tahm\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tahm\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\files\\projects\\git\\tahm\\tahm\\tahm\\tahm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tahm\\tahm\\tahm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\files\\projects\\git\\tahm(backup)\\tahm\\engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -16,15 +24,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "tahm.h",
+              "DocumentMoniker": "E:\\files\\projects\\git\\tahm\\tahm\\tahm\\tahm.h",
+              "RelativeDocumentMoniker": "tahm\\tahm\\tahm.h",
+              "ToolTip": "E:\\files\\projects\\git\\tahm\\tahm\\tahm\\tahm.h",
+              "RelativeToolTip": "tahm\\tahm\\tahm.h",
+              "ViewState": "AQIAAGIAAAAAAAAAAADwv38AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-28T11:51:23.63Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "E:\\files\\projects\\git\\tahm\\tahm\\main.cpp",
+              "RelativeDocumentMoniker": "tahm\\main.cpp",
+              "ToolTip": "E:\\files\\projects\\git\\tahm\\tahm\\main.cpp",
+              "RelativeToolTip": "tahm\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAYwCAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-28T11:37:00.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "engine.cpp",
               "DocumentMoniker": "E:\\files\\projects\\git\\tahm(backup)\\tahm\\engine.cpp",
               "RelativeDocumentMoniker": "..\\tahm(backup)\\tahm\\engine.cpp",
@@ -37,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "tahm.h",
               "DocumentMoniker": "E:\\files\\projects\\git\\tahm(backup)\\tahm\\tahm\\tahm.h",
               "RelativeDocumentMoniker": "..\\tahm(backup)\\tahm\\tahm\\tahm.h",

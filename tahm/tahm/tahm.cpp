@@ -3,6 +3,21 @@
 extern Tahm tahm;
 
 
+/*
+		tahmlib
+		A C++ library for Game Development
+
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Tahm --
+
+		Definitions for the main tahmlib methods:
+		setup, initialization, cleanup.
+*/
+
+
+
 Tahm::Tahm(void)
 {
 	running = true;

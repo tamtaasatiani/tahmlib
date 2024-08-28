@@ -1,5 +1,23 @@
 #include "seek.h"
 
+
+/*
+        tahmlib
+        A C++ library for Game Development
+
+        Author: Tamta Asatiani
+        tamta@geolab.edu.ge
+
+        -- Renderer --
+
+        Definitions for all methods
+        used by the library renderer to set up the
+        rendering process.
+*/
+
+
+
+
 Tahm::Renderer::Renderer(Window* window)
 {
     this->window = window;

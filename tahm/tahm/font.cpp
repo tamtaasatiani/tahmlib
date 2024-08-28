@@ -1,5 +1,21 @@
 #include "seek.h"
 
+
+/*
+		tahmlib
+		A C++ library for Game Development
+
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Font --
+
+		Definitions for all font related methods,
+		such as: font library initialization and font creation.
+*/
+
+
+
 Tahm::Graphics::Font::Font(void)
 {
 

@@ -1,6 +1,20 @@
 #include "seek.h"
 
 
+
+/*
+		tahmlib
+		A C++ library for Game Development
+
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Sound --
+
+		Definitions for all sound related methods,
+		such as creating sound and linking the audio device to a sound.
+*/
+
 Tahm::Audio::Sound::Sound(const char* path, SDL_AudioSpec* spec)
 {
 

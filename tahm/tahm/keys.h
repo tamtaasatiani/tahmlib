@@ -1,5 +1,22 @@
 #pragma once
 
+
+/*
+		tahmlib
+		A C++ library for Game Development
+
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Keys --
+
+		Definitions for all audio and sound related methods.
+*/
+
+
+
+
+
 // event keys
 
 enum Keys

@@ -2,6 +2,23 @@
 
 #include "seek.h"
 
+
+/*
+		tahmlib
+		A C++ library for Game Development
+
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Main Engine --
+
+		Contains declarations for all of the methods and attributes
+		provided in tahmlib.
+*/
+
+
+
+
 // engine class
 
 class Tahm {

@@ -1,5 +1,26 @@
 #include "seek.h"
 
+
+/*
+		tahmlib
+		A C++ library for Game Development
+
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Audio --
+
+		Definitions for all audio related methods,
+		such as: audio device management, sound creation.
+*/
+
+
+
+
+
+
+
+
 Tahm::Audio::Audio()
 {
 	SDL_Init(SDL_INIT_AUDIO);

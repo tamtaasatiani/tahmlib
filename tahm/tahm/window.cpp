@@ -1,5 +1,21 @@
 #include "seek.h"
 
+/*
+        tahmlib
+        A C++ library for Game Development
+
+        Author: Tamta Asatiani
+        tamta@geolab.edu.ge
+
+        -- Window --
+
+        Definitions for all methods
+        used by the library to set up and configure
+        the game window.
+*/
+
+
+
 void Tahm::Window::create(const char* title, int width, int height)
 {
     this->title = title;

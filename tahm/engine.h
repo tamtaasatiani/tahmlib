@@ -2,6 +2,23 @@
 
 #include "tahm/seek.h"
 
+
+
+
+/*
+		tahmlib
+		A C++ library for Game Development
+
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Methods --
+
+		Main library methods that represent the game loop:
+		start, update, render, and event.
+*/
+
+
 extern Tahm tahm;
 
 // start method, get's called once at the start

@@ -4,17 +4,18 @@
 
 
 /*
-		Game Development library made with and for C++
+		tahmlib
+		A C++ library for Game Development
 
-		This code is a property of Tamta Asatiani
+		Author: Tamta Asatiani
 		tamta@geolab.edu.ge
+
+		-- Game Loop --
+
+		Sets up the game loop and creates conditions
+		for breaking out of it, if specific requirements are met,
+		and cleans up references when the application is closed.
 */
-
-
-
-
-
-
 
 
 

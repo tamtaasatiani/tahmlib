@@ -1,7 +1,18 @@
 #pragma once
 
+/*
+		tahmlib
+		A C++ library for Game Development
 
-// dependencies header
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Seek --
+
+		tahmlib's dependencies
+*/
+
+
 
 // C++ standard libraries
 

@@ -1,5 +1,23 @@
 #include "seek.h"
 
+
+/*
+		tahmlib
+		A C++ library for Game Development
+
+		Author: Tamta Asatiani
+		tamta@geolab.edu.ge
+
+		-- Graphics --
+
+		Definitions for all graphics related methods,
+		such as: font and shape rendering, setting the draw color,
+		background fill.
+*/
+
+
+
+
 Tahm::Graphics::Graphics(Renderer* renderer)
 {
 	this->renderer = renderer;
