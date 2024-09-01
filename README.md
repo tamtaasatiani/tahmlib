@@ -142,5 +142,7 @@ void update()
 <br/>
 
 ## Example projects
-- [pong++](https://github.com/tamtaasatiani/pong-plusplus) : Atari 1972 Pong clone.
+- [pong++](https://github.com/tamtaasatiani/pong-plusplus) : Atari's 1972 Pong clone.
+
+<br/>
 
