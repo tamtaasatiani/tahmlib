@@ -52,7 +52,7 @@ void handleEvents()
 }
 
 
-//game loop
+// game loop
 
 int main(int argc, char* argv[])
 {
