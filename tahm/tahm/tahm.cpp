@@ -1,7 +1,4 @@
-#include "seek.h"
-
-extern Tahm tahm;
-
+#include "tahm.h"
 
 /*
 		tahmlib
@@ -35,6 +32,12 @@ void Tahm::init(void)
 	window->init();
 	renderer->init();
 	audio->setupDevice();
+}
+
+Tahm& Tahm::getInstance(void)
+{
+	static Tahm tahm;
+	return tahm;
 }
 
 /*

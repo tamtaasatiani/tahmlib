@@ -1,4 +1,3 @@
-#include "tahm/seek.h"
 #include "engine.h"
 
 
@@ -20,12 +19,6 @@
 
 
 
-
-// engine instance
-
-Tahm tahm = Tahm();
-
-
 // event handling
 
 void handleEvents()
@@ -36,7 +29,7 @@ void handleEvents()
 		switch (event.type)
 		{
 		case SDL_QUIT:
-			tahm.running = false;
+			Tahm::getInstance().running = false;
 			break;
 
 
@@ -56,6 +49,7 @@ void handleEvents()
 
 int main(int argc, char* argv[])
 {
+	Tahm& tahm = Tahm::getInstance();
 	start();
 	tahm.init();
 

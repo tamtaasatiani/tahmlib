@@ -213,13 +213,15 @@ public:
 	// update & render running
 	bool running;
 
-public:
+private:
 	Tahm();
-	~Tahm();
 
+public:
+	~Tahm();
 
 	void init(void);
 
+	static Tahm& getInstance();
 
 	// destroy window, renderer, and quit the application
 	void destroy();
