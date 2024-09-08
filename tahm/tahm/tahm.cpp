@@ -13,7 +13,7 @@
 		setup, initialization, cleanup.
 */
 
-
+Tahm* Tahm::tahm;
 
 Tahm::Tahm(void)
 {
@@ -37,7 +37,7 @@ void Tahm::init(void)
 Tahm& Tahm::getInstance(void)
 {
 	if (tahm == nullptr) {
-		tahm.reset(new Tahm());
+		tahm = new Tahm();
 	}
 	return *tahm;
 }
