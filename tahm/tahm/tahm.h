@@ -200,7 +200,7 @@ public:
 
 
 private:
-	static std::unique_ptr<Tahm> tahm;
+	static Tahm * tahm;
 
 public:
 
