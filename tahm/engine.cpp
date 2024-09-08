@@ -1,4 +1,3 @@
-#include "tahm/seek.h"
 #include "engine.h"
 
 
@@ -20,13 +19,9 @@
 
 
 
-
-// engine instance
-
-Tahm tahm = Tahm();
-
-
 // event handling
+
+Tahm& tahm = Tahm::getInstance();
 
 void handleEvents()
 {

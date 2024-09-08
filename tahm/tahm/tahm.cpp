@@ -1,7 +1,4 @@
-#include "seek.h"
-
-extern Tahm tahm;
-
+#include "tahm.h"
 
 /*
 		tahmlib
@@ -16,7 +13,7 @@ extern Tahm tahm;
 		setup, initialization, cleanup.
 */
 
-
+Tahm* Tahm::tahm;
 
 Tahm::Tahm(void)
 {
@@ -35,6 +32,14 @@ void Tahm::init(void)
 	window->init();
 	renderer->init();
 	audio->setupDevice();
+}
+
+Tahm& Tahm::getInstance(void)
+{
+	if (tahm == nullptr) {
+		tahm = new Tahm();
+	}
+	return *tahm;
 }
 
 /*
@@ -64,6 +69,7 @@ Tahm::~Tahm()
 {
 	delete window, renderer;
 	delete input, graphics, audio;
+	delete tahm;
 }
 
 
