@@ -199,7 +199,8 @@ public:
 	};
 
 
-
+private:
+	static std::unique_ptr<Tahm> tahm;
 
 public:
 

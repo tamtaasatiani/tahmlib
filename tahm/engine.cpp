@@ -21,6 +21,8 @@
 
 // event handling
 
+Tahm& tahm = Tahm::getInstance();
+
 void handleEvents()
 {
 	Event event;
@@ -29,7 +31,7 @@ void handleEvents()
 		switch (event.type)
 		{
 		case SDL_QUIT:
-			Tahm::getInstance().running = false;
+			tahm.running = false;
 			break;
 
 
@@ -49,7 +51,6 @@ void handleEvents()
 
 int main(int argc, char* argv[])
 {
-	Tahm& tahm = Tahm::getInstance();
 	start();
 	tahm.init();
 

@@ -13,6 +13,7 @@
 		setup, initialization, cleanup.
 */
 
+std::unique_ptr<Tahm> Tahm::tahm;
 
 
 Tahm::Tahm(void)
@@ -36,8 +37,10 @@ void Tahm::init(void)
 
 Tahm& Tahm::getInstance(void)
 {
-	static Tahm tahm;
-	return tahm;
+	if (tahm == nullptr) {
+		tahm.reset(new Tahm());
+	}
+	return *tahm;
 }
 
 /*
