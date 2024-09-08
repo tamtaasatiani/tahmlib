@@ -13,7 +13,6 @@
 		setup, initialization, cleanup.
 */
 
-std::unique_ptr<Tahm> Tahm::tahm;
 
 
 Tahm::Tahm(void)
