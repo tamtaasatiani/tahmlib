@@ -70,6 +70,7 @@ Tahm::~Tahm()
 {
 	delete window, renderer;
 	delete input, graphics, audio;
+	delete tahm;
 }
 
 
