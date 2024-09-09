@@ -39,9 +39,6 @@
     <ClCompile Include="tahm\font.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tahm\sound.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine.h">

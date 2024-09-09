@@ -1,5 +1,6 @@
 #pragma once
 
+#include <map>
 #include "seek.h"
 
 
@@ -161,43 +162,29 @@ public:
 
 	class Audio
 	{
-	public:
-
-		// class for creating sound instances
-
-		class Sound
+	private:
+		struct Sound
 		{
-		private:
-			SDL_AudioSpec* spec;
-			Uint8* waveStart;
-			Uint32 waveLength;
-
-
-			SDL_AudioDeviceID* device;
-
-		public:
-			Sound(const char* path, SDL_AudioSpec* spec);
-			~Sound();
-
-			void linkDevice(SDL_AudioDeviceID* device);
-
-			void play();
+			SDL_AudioSpec *spec;
+			Uint8 *buffer;
+			Uint32 length;
 		};
 
+		std::map<std::string, Sound> sounds;
+		Uint8 *currentAudioBuffer;
+		Uint32 audioLength;
+		SDL_AudioSpec *audioSpec;
+		SDL_AudioDeviceID audioDevice;
+
 	public:
-		Audio();
+		Audio() : audioDevice(0), audioSpec{nullptr}, currentAudioBuffer(nullptr), audioLength(0) {}
+		~Audio();
 
-		void setupDevice();
-		SDL_AudioDeviceID device;
-
-		// create a new sound
-		Sound* newSound(const char* path);
-
-	private:
-		SDL_AudioSpec spec;
-
+		bool init();
+		bool loadWav(const std::string &id, const std::string &filepath);
+		void playWav(const std::string &id);
+		void cleanUp();
 	};
-
 
 private:
 	static Tahm * tahm;
