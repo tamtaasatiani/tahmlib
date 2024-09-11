@@ -42,7 +42,7 @@ Open up the main.cpp file, you'll see this code
 
 <br/>
 
-```
+```cpp
 #include "engine.h"
 
 void start()
@@ -73,7 +73,7 @@ note: the create method is optional. If it's not called, tahm will assign defaul
 
 <br/>
 
-```
+```cpp
 void start()
 {
 	tahm.window->create("Test", 1280, 720);
@@ -93,7 +93,7 @@ Then in the draw function, set the active color and call the "rect" method to dr
 
 <br/>
 
-```
+```cpp
 #include "engine.h"
 
 struct Player
@@ -126,7 +126,7 @@ You should get something like:<br/>
 <br/>
 
 Almost there! Now just update the player x position whenever we press the D key.<br/>
-```
+```cpp
 void update()
 {
 	if (tahm.input->keyPressed[KEYCODE_D])

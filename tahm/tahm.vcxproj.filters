@@ -24,9 +24,6 @@
     <ClCompile Include="tahm\graphics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tahm\input.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="tahm\renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -158,7 +158,6 @@
     <ClCompile Include="tahm\audio.cpp" />
     <ClCompile Include="tahm\font.cpp" />
     <ClCompile Include="tahm\graphics.cpp" />
-    <ClCompile Include="tahm\input.cpp" />
     <ClCompile Include="tahm\renderer.cpp" />
     <ClCompile Include="tahm\sound.cpp" />
     <ClCompile Include="tahm\tahm.cpp" />
