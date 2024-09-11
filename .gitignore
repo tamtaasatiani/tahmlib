@@ -56,3 +56,5 @@ ipch/
 *.scc
 
 *.tlog
+
+*.exe
