@@ -31,7 +31,7 @@ void Tahm::init(void)
 {
 	window->init();
 	renderer->init();
-	audio->setupDevice();
+	audio->init();
 }
 
 Tahm& Tahm::getInstance(void)

@@ -159,7 +159,6 @@
     <ClCompile Include="tahm\font.cpp" />
     <ClCompile Include="tahm\graphics.cpp" />
     <ClCompile Include="tahm\renderer.cpp" />
-    <ClCompile Include="tahm\sound.cpp" />
     <ClCompile Include="tahm\tahm.cpp" />
     <ClCompile Include="tahm\window.cpp" />
   </ItemGroup>
