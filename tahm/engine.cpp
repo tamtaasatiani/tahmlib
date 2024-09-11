@@ -65,7 +65,6 @@ int main(int argc, char* argv[])
 	while (tahm.running)
 	{
 
-		Event event;
 
 		handleEvents();
 
