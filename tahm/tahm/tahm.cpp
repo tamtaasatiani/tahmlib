@@ -1,4 +1,5 @@
 #include "tahm.h"
+#include "../engine.h"
 
 /*
 		tahmlib
@@ -29,9 +30,46 @@ Tahm::Tahm(void)
 
 void Tahm::init(void)
 {
+	start();
 	window->init();
 	renderer->init();
 	audio->setupDevice();
+}
+
+void Tahm::run(void)
+{
+	while(running)
+	{
+		handleEvents();
+		update();
+		renderer->prepare();
+		draw();
+		renderer->present();
+		SDL_Delay(16);
+	}
+}
+
+void Tahm::handleEvents()
+{
+	Event event;
+	while (SDL_PollEvent(&event))
+	{
+		switch (event.type)
+		{
+		case SDL_QUIT:
+			running = false;
+			break;
+
+
+		case SDL_KEYDOWN:
+			keypressed(event);
+			break;
+
+		default:
+			break;
+		}
+	}
+
 }
 
 Tahm& Tahm::getInstance(void)

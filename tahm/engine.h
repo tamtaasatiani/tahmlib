@@ -2,9 +2,6 @@
 
 #include "tahm/seek.h"
 
-
-
-
 /*
 		tahmlib
 		A C++ library for Game Development
@@ -18,6 +15,7 @@
 		start, update, render, and event.
 */
 
+extern Tahm& tahm;
 
 // start method, get's called once at the start
 void start();
@@ -31,5 +29,3 @@ void draw();
 // keypressed method, only called when there's an event, takes in an event as the argument
 void keypressed(Event event);
 
-
-int main(int argc, char* argv[]);

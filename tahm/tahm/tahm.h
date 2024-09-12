@@ -2,7 +2,6 @@
 
 #include "seek.h"
 
-
 /*
 		tahmlib
 		A C++ library for Game Development
@@ -16,14 +15,13 @@
 		provided in tahmlib.
 */
 
-
-
-
 // engine class
 
 class Tahm {
-
+public:
+	void run();
 private:
+	void handleEvents();
 
 	// tahm's window. made up of
 	// the SDL window + methods and parameters for it
