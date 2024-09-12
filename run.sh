@@ -4,10 +4,10 @@
 set -xe
 
 # Set up the build directory
-meson setup builddir
+meson setup build/linux-x86_64
 
 # build the project
-ninja -C builddir
+ninja -C build/linux-x86_64
 
 # run the project
-./builddir/tahm 
+./build/linux-x86_64/tahm 
