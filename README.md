@@ -156,7 +156,7 @@ void update()
 
 ```bash
 # Arch Linux
-sudo pacman -S meson sdl2 sdl2_ttf base-devel
+sudo pacman -S meson sdl12-compat sdl2_ttf base-devel
 ```
 
 ```bash
