@@ -2,9 +2,9 @@ project('tahm', 'cpp',
   version : '0.1.0',
   default_options : [
     'cpp_std=c++23',
-    'warning_level=3', # 3 is the default
-    'buildtype=debug',
-    'optimization=0',
+    'warning_level=3',  # 3 is the default
+    'buildtype=debug',  # debug is the default
+    'optimization=0',   # 0 is the default, 0 is for debug
   ]
 )
 
@@ -33,6 +33,7 @@ src_files = files(
     'tahm/tahm/window.cpp',
 )
 
+# Define the linker arguments
 link_args = [
  
 ]
@@ -46,12 +47,12 @@ dependencies = [
     sdl_ttf_dep,
 ]
 
-# Includes
+# Project includes
 inc_dir = include_directories(
     'tahm/tahm',
 )
 
-# Make the executable
+# Create the executable
 executable('tahm', 
   src_files,
   include_directories: inc_dir,
