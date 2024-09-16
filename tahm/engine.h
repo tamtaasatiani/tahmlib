@@ -18,6 +18,7 @@
 		start, update, render, and event.
 */
 
+extern Tahm& tahm;
 
 // start method, get's called once at the start
 void start();

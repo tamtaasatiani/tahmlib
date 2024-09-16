@@ -3,7 +3,7 @@
 
 void start()
 {
-	
+	tahm.window->create("Hello", 1280, 720);
 }
 
 void keypressed(Event event)

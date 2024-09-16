@@ -5,6 +5,11 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tahm", "tahm\tahm.vcxproj", "{BCD8298E-5C2B-49EB-B5D9-7551AFFBAAF6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game", "game\game.vcxproj", "{0DBF6E7C-2992-4DD3-A8C9-10B5F91F2D36}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BCD8298E-5C2B-49EB-B5D9-7551AFFBAAF6} = {BCD8298E-5C2B-49EB-B5D9-7551AFFBAAF6}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +26,14 @@ Global
 		{BCD8298E-5C2B-49EB-B5D9-7551AFFBAAF6}.Release|x64.Build.0 = Release|x64
 		{BCD8298E-5C2B-49EB-B5D9-7551AFFBAAF6}.Release|x86.ActiveCfg = Release|Win32
 		{BCD8298E-5C2B-49EB-B5D9-7551AFFBAAF6}.Release|x86.Build.0 = Release|Win32
+		{0DBF6E7C-2992-4DD3-A8C9-10B5F91F2D36}.Debug|x64.ActiveCfg = Debug|x64
+		{0DBF6E7C-2992-4DD3-A8C9-10B5F91F2D36}.Debug|x64.Build.0 = Debug|x64
+		{0DBF6E7C-2992-4DD3-A8C9-10B5F91F2D36}.Debug|x86.ActiveCfg = Debug|Win32
+		{0DBF6E7C-2992-4DD3-A8C9-10B5F91F2D36}.Debug|x86.Build.0 = Debug|Win32
+		{0DBF6E7C-2992-4DD3-A8C9-10B5F91F2D36}.Release|x64.ActiveCfg = Release|x64
+		{0DBF6E7C-2992-4DD3-A8C9-10B5F91F2D36}.Release|x64.Build.0 = Release|x64
+		{0DBF6E7C-2992-4DD3-A8C9-10B5F91F2D36}.Release|x86.ActiveCfg = Release|Win32
+		{0DBF6E7C-2992-4DD3-A8C9-10B5F91F2D36}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
