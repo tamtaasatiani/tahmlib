@@ -2,7 +2,7 @@
 
 #include "tahm/seek.h"
 
-
+extern Tahm& tahm;
 
 
 /*
