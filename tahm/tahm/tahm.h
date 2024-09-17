@@ -76,7 +76,7 @@ private:
 	public:
 		
 		// creates a reference to the game window
-		Renderer(Window* window);
+		Renderer(Window& window);
 
 		// initialize renderer
 		void init(void);
@@ -110,7 +110,7 @@ public:
 		};
 
 	public:
-		Graphics(Renderer* renderer);
+		Graphics(Renderer& renderer);
 		~Graphics();
 
 		// fill the scene with a blank color
@@ -139,7 +139,7 @@ public:
 		private:
 			Renderer* renderer;
 		public:
-			Draw(Renderer* renderer);
+			Draw(Renderer& renderer);
 
 			SDL_Rect rect(int x, int y, int width, int height);
 		};
@@ -179,7 +179,7 @@ public:
 			Sound(const char* path, SDL_AudioSpec* spec);
 			~Sound();
 
-			void linkDevice(SDL_AudioDeviceID* device);
+			void linkDevice(SDL_AudioDeviceID& device);
 
 			void play();
 		};

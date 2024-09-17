@@ -31,9 +31,9 @@ Tahm::Audio::Sound::Sound(const char* path, SDL_AudioSpec* spec)
 
 
 
-void Tahm::Audio::Sound::linkDevice(SDL_AudioDeviceID* device)
+void Tahm::Audio::Sound::linkDevice(SDL_AudioDeviceID& device)
 {
-	this->device = device;
+	this->device = &device;
 }
 
 

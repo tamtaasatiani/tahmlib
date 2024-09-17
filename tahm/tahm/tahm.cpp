@@ -20,10 +20,10 @@ Tahm::Tahm(void)
 	running = true;
 
 	window = new Window;
-	renderer = new Renderer(window);
+	renderer = new Renderer(*window);
 
 	input = new Input;
-	graphics = new Graphics(renderer);
+	graphics = new Graphics(*renderer);
 	audio = new Audio();
 }
 

@@ -18,9 +18,9 @@
 
 
 
-Tahm::Graphics::Graphics(Renderer* renderer)
+Tahm::Graphics::Graphics(Renderer& renderer)
 {
-	this->renderer = renderer;
+	this->renderer = &renderer;
 
 	font = new Font();
 	draw = new Draw(renderer);
@@ -94,9 +94,9 @@ void Tahm::Graphics::printf(const char* alignment, int alignmentWidth, int margi
 
 //draw
 
-Tahm::Graphics::Draw::Draw(Renderer* renderer)
+Tahm::Graphics::Draw::Draw(Renderer& renderer)
 {
-	this->renderer = renderer;
+	this->renderer = &renderer;
 }
 
 SDL_Rect Tahm::Graphics::Draw::rect(int x, int y, int width, int height)

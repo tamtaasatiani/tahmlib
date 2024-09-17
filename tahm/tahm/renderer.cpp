@@ -18,9 +18,9 @@
 
 
 
-Tahm::Renderer::Renderer(Window* window)
+Tahm::Renderer::Renderer(Window& window)
 {
-    this->window = window;
+    this->window = &window;
 }
 
 void Tahm::Renderer::init(void)

@@ -41,6 +41,6 @@ void Tahm::Audio::setupDevice()
 Tahm::Audio::Sound* Tahm::Audio::newSound(const char* path)
 {
 	Sound* sound = new Sound(path, &spec);
-	sound->linkDevice(&device);
+	sound->linkDevice(device);
 	return sound;
 }
