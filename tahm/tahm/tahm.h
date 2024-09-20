@@ -21,6 +21,9 @@
 
 // engine class
 
+typedef void (*vFunc)();
+typedef void (*vFuncEv)(Event);
+
 class Tahm {
 
 private:
@@ -200,6 +203,12 @@ public:
 
 
 private:
+	void handleEvents();
+
+	vFunc callbackUpdate;
+	vFunc callbackDraw;
+	vFuncEv callbackKeypressed;
+
 	static Tahm * tahm;
 
 public:
@@ -220,7 +229,8 @@ private:
 public:
 	~Tahm();
 
-	void init(void);
+	void init(vFunc start, vFunc update, vFunc draw, vFuncEv keypressed);
+	void run();
 
 	static Tahm& getInstance();
 

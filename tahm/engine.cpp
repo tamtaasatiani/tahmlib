@@ -23,67 +23,15 @@
 
 Tahm& tahm = Tahm::getInstance();
 
-void handleEvents()
-{
-	Event event;
-	while (SDL_PollEvent(&event))
-	{
-		switch (event.type)
-		{
-		case SDL_QUIT:
-			tahm.running = false;
-			break;
-
-
-		case SDL_KEYDOWN:
-			keypressed(event);
-			break;
-
-		default:
-			break;
-		}
-	}
-
-}
-
-
 // game loop
 
 int main(int argc, char* argv[])
 {
-	start();
-	tahm.init();
-
-
-
-
-	while (tahm.running)
-	{
-
-
-		handleEvents();
-
-
-
-
-
-		update();
-
-		//render loop
-
-		tahm.renderer->prepare();
-
-		draw();
-
-		tahm.renderer->present();
-
-		SDL_Delay(16);
-	}
-
+	tahm.init(start, update, draw, keypressed);
+	tahm.run();
 	tahm.destroy();
 
 	return 0;
-
 }
 
 

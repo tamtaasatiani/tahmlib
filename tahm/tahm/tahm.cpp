@@ -27,8 +27,13 @@ Tahm::Tahm(void)
 	audio = new Audio();
 }
 
-void Tahm::init(void)
+void Tahm::init(vFunc start, vFunc update, vFunc draw, vFuncEv keypressed)
 {
+	callbackUpdate = update;
+	callbackDraw = draw;
+	callbackKeypressed = keypressed;
+
+	start(); // Call Start right away
 	window->init();
 	renderer->init();
 	audio->setupDevice();
@@ -42,28 +47,42 @@ Tahm& Tahm::getInstance(void)
 	return *tahm;
 }
 
-/*
-
-void Tahm::loop()
+void Tahm::run()
 {
-	//input->read();
+	while(running)
+	{
+		// Update
+		handleEvents();
+		callbackUpdate();
+		//Draw
+		renderer->prepare();
+		callbackDraw();
+		renderer->present();
 
+		SDL_Delay(16);
+	}
+}
 
+void Tahm::handleEvents()
+{
+	Event event;
+	while (SDL_PollEvent(&event))
+	{
+		switch (event.type)
+		{
+			case SDL_QUIT:
+				running = false;
+				break;
 
-	//if (update) update();
-	//
+			case SDL_KEYDOWN:
+				callbackKeypressed(event);
+				break;
 
-	//input->clear();
-
-
-	renderer->prepare();
-
-	//if (draw) draw();
-
-	renderer->present();
-
-	SDL_Delay(16);
-}*/
+			default:
+				break;
+		}
+	}
+}
 
 Tahm::~Tahm()
 {
