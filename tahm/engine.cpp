@@ -17,74 +17,27 @@
 */
 
 
-
-
 // event handling
 
 Tahm& tahm = Tahm::getInstance();
 
-void handleEvents()
-{
-	Event event;
-	while (SDL_PollEvent(&event))
-	{
-		switch (event.type)
-		{
-		case SDL_QUIT:
-			tahm.running = false;
-			break;
-
-
-		case SDL_KEYDOWN:
-			keypressed(event);
-			break;
-
-		default:
-			break;
-		}
-	}
-
-}
-
-
 // game loop
+
 
 int main(int argc, char* argv[])
 {
-	start();
-	tahm.init();
-
-
-
-
-	while (tahm.running)
+	if (!GAME_FOUND)
 	{
-
-
-		handleEvents();
-
-
-
-
-
-		update();
-
-		//render loop
-
-		tahm.renderer->prepare();
-
-		draw();
-
-		tahm.renderer->present();
-
-		SDL_Delay(16);
+		std::cerr << "tahm cannot find the game code\n";
+		return 0;
 	}
 
-	tahm.destroy();
+	tahm.start_ptr = start;
+	tahm.input_ptr = keypressed;
+	tahm.update_ptr = update;
+	tahm.draw_ptr = draw;
+
+	tahm.run();
 
 	return 0;
-
 }
-
-
-

@@ -42,36 +42,63 @@ Tahm& Tahm::getInstance(void)
 	return *tahm;
 }
 
-/*
+void Tahm::handleEvents()
+{
+	Event event;
+	while (SDL_PollEvent(&event))
+	{
+		switch (event.type)
+		{
+		case SDL_QUIT:
+			running = false;
+			break;
+
+
+		case SDL_KEYDOWN:
+			input_ptr(event);
+			break;
+
+		default:
+			break;
+		}
+	}
+
+}
+
+void Tahm::setup()
+{
+	start_ptr();
+	init();
+}
 
 void Tahm::loop()
 {
-	//input->read();
+	handleEvents();
 
-
-
-	//if (update) update();
-	//
-
-	//input->clear();
-
+	update_ptr();
 
 	renderer->prepare();
 
-	//if (draw) draw();
+	draw_ptr();
 
 	renderer->present();
 
 	SDL_Delay(16);
-}*/
-
-Tahm::~Tahm()
-{
-	delete window, renderer;
-	delete input, graphics, audio;
-	delete tahm;
 }
 
+void Tahm::run()
+{
+	setup();
+
+	while (running)
+	{
+		loop();
+	}
+
+	destroy();
+
+	return;
+}
 
 void Tahm::destroy(void)
 {
@@ -80,4 +107,11 @@ void Tahm::destroy(void)
 	SDL_DestroyWindow(window->SDLwindow);
 
 	SDL_Quit();
+}
+
+Tahm::~Tahm()
+{
+	delete window, renderer;
+	delete input, graphics, audio;
+	delete tahm;
 }

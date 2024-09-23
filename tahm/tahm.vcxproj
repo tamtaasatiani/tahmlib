@@ -169,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="tahm\defs.h" />
     <ClInclude Include="tahm\keys.h" />
     <ClInclude Include="tahm\seek.h" />
