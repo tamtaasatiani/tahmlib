@@ -74,9 +74,9 @@ private:
 		SDL_Renderer* SDLrenderer;
 
 	public:
-		
+
 		// creates a reference to the game window
-		Renderer(Window& window);
+		Renderer(Window* window);
 
 		// initialize renderer
 		void init(void);
@@ -110,7 +110,7 @@ public:
 		};
 
 	public:
-		Graphics(Renderer& renderer);
+		Graphics(Renderer* renderer);
 		~Graphics();
 
 		// fill the scene with a blank color
@@ -139,7 +139,7 @@ public:
 		private:
 			Renderer* renderer;
 		public:
-			Draw(Renderer& renderer);
+			Draw(Renderer* renderer);
 
 			SDL_Rect rect(int x, int y, int width, int height);
 		};
@@ -151,7 +151,7 @@ public:
 		Draw* draw;
 		Font* font;
 
-	// current active color
+		// current active color
 	private:
 		Color color = { 0, 0, 0 };
 	};
@@ -179,7 +179,7 @@ public:
 			Sound(const char* path, SDL_AudioSpec* spec);
 			~Sound();
 
-			void linkDevice(SDL_AudioDeviceID& device);
+			void linkDevice(SDL_AudioDeviceID* device);
 
 			void play();
 		};
@@ -200,7 +200,7 @@ public:
 
 
 private:
-	static Tahm * tahm;
+	static Tahm* tahm;
 
 public:
 
@@ -214,6 +214,12 @@ public:
 	// update & render running
 	bool running;
 
+	//callbacks
+	void(*start_ptr)();
+	void(*input_ptr)(Event);
+	void(*update_ptr)();
+	void(*draw_ptr)();
+
 private:
 	Tahm();
 
@@ -221,6 +227,11 @@ public:
 	~Tahm();
 
 	void init(void);
+
+	void run();
+	void setup();
+	void loop();
+	void handleEvents();
 
 	static Tahm& getInstance();
 
