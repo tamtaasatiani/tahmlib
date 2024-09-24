@@ -153,7 +153,7 @@ public:
 
 		// current active color
 	private:
-		Color color = { 0, 0, 0 };
+		Color color = { 0, 0, 0 , 255}; // all four attributes must be defined
 	};
 
 

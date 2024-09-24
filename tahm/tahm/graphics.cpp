@@ -44,8 +44,8 @@ void Tahm::Graphics::setColor(int r, int g, int b, int a)
 	SDL_SetRenderDrawColor(this->renderer->SDLrenderer, r, g, b, a);
 
 	// convert to char
-	unsigned char cr = r, cg = g, cb = b;
-	color = { cr, cg, cb };
+	unsigned char cr = r, cg = g, cb = b, ca = a;
+	color = { cr, cg, cb , ca};
 }
 
 
