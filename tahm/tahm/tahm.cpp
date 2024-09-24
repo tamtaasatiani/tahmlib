@@ -111,7 +111,10 @@ void Tahm::destroy(void)
 
 Tahm::~Tahm()
 {
-	delete window, renderer;
-	delete input, graphics, audio;
+	delete window;
+	delete renderer;
+	delete input; 
+	delete graphics;
+	delete audio;
 	delete tahm;
 }

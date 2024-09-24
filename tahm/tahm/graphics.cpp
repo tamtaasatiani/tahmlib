@@ -28,7 +28,8 @@ Tahm::Graphics::Graphics(Renderer& renderer)
 
 Tahm::Graphics::~Graphics()
 {
-	delete font, draw;
+	delete font;
+	delete draw;
 }
 
 
