@@ -1,4 +1,5 @@
 #include "seek.h"
+#include "utils.h"
 
 
 /*
@@ -68,15 +69,15 @@ void Tahm::Graphics::printf(const char* alignment, int alignmentWidth, int margi
 
 	SDL_Rect destination;
 
-	if (alignment == "left")
+	if (compareStrings(alignment, "left"))
 	{
 		destination = { marginX, marginY, renderedText->w, renderedText->h };
 	}
-	else if (alignment == "center")
+	else if (compareStrings(alignment, "center"))
 	{
 		destination = { alignmentWidth / 2 - renderedText->w / 2 + marginX, marginY, renderedText->w, renderedText->h };
 	}
-	else if (alignment == "right")
+	else if (compareStrings(alignment, "right"))
 	{
 		destination = { alignmentWidth - renderedText->w + marginX, marginY, renderedText->w, renderedText->h };
 	}
