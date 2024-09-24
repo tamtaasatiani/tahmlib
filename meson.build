@@ -14,9 +14,9 @@ c_args = [
 ]
 
 cpp_args = [
-  # '-Wno-pedantic',
-  # '-Wno-narrowing',
-  # '-Wno-missing-field-initializers',
+  '-Wno-pedantic',
+  '-Wno-narrowing',
+  '-Wno-missing-field-initializers',
 ]
 
 # Define the source files for the project
