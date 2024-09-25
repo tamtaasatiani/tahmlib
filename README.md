@@ -114,6 +114,7 @@ Player player(200, 200, 20, 20);
 
 void draw()
 {
+	tahm.graphics->setColor(255, 255, 255);
 	tahm.graphics->draw->rect(player.x, player.y, player.width, player.height);
 }
 ```
