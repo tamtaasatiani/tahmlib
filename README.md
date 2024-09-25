@@ -147,3 +147,28 @@ void update()
 
 <br/>
 
+
+
+---
+
+# Linux
+
+## Pre-requisites
+
+```bash
+# Arch Linux
+sudo pacman -S meson sdl2 sdl2_ttf base-devel
+```
+
+```bash
+# Ubuntu
+sudo apt update
+sudo apt install libsdl2-dev libsdl2-ttf-dev build-essential
+```
+
+## Run
+
+```bash
+chmod +x run.sh
+./run.sh
+```
