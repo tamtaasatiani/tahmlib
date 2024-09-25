@@ -40,7 +40,8 @@ link_args = [
 
 
 sdl_dep = dependency('sdl2', required: true)
-sdl_ttf_dep = dependency('SDL2_ttf', required: true, method: 'pkg-config')
+# sdl_ttf_dep = dependency('sdl2_ttf', required: true) # for Arch Linux
+sdl_ttf_dep = dependency('SDL2_ttf', required: true, method: 'pkg-config') # for Ubuntu
 
 dependencies = [
     sdl_dep,
