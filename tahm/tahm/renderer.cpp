@@ -31,7 +31,7 @@ void Tahm::Renderer::init(void)
 
     if (!SDLrenderer)
     {
-        std::cerr << "Failed to create renderer: " << SDL_GetError() << std::endl;
+        std::cerr << "Failed to create renderer: " << SDL_GetError() << '\n';
         exit(1);
     }
 }

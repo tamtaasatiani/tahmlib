@@ -28,7 +28,7 @@ void Tahm::Window::init(void)
 {
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {
-        std::cerr << "Couldn't initialize SDL: " << SDL_GetError() << std::endl;
+        std::cerr << "Couldn't initialize SDL: " << SDL_GetError() << '\n';
         exit(1);
     }
 
@@ -40,7 +40,7 @@ void Tahm::Window::init(void)
 
     if (!SDLwindow)
     {
-        std::cerr << "Failed to open " << width << " x " << height << " window: " << SDL_GetError() << std::endl;
+        std::cerr << "Failed to open " << width << " x " << height << " window: " << SDL_GetError() << '\n';
         exit(1);
     }
 }

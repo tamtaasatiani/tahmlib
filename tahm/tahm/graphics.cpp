@@ -83,7 +83,7 @@ void Tahm::Graphics::printf(const char* alignment, int alignmentWidth, int margi
 	}
 	else
 	{
-		std::cerr << "Invalid alignment!" << std::endl;
+		std::cerr << "Invalid alignment!" << '\n';
 	}
 
 
