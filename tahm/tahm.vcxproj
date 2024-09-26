@@ -165,6 +165,7 @@
     <ClCompile Include="tahm\renderer.cpp" />
     <ClCompile Include="tahm\sound.cpp" />
     <ClCompile Include="tahm\tahm.cpp" />
+    <ClCompile Include="tahm\util.cpp" />
     <ClCompile Include="tahm\window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +175,7 @@
     <ClInclude Include="tahm\keys.h" />
     <ClInclude Include="tahm\seek.h" />
     <ClInclude Include="tahm\tahm.h" />
+    <ClInclude Include="tahm\util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
