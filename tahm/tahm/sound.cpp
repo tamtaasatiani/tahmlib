@@ -23,7 +23,7 @@ Tahm::Audio::Sound::Sound(const char* path, SDL_AudioSpec* spec)
 
 	if (SDL_LoadWAV(path, spec, &waveStart, &waveLength) == nullptr)
 	{
-		std::cerr << ("Failed to load sound: %s\n", SDL_GetError()) << std::endl;
+		std::cerr << "Failed to load sound: " << SDL_GetError() << '\n';
 	}
 
 
