@@ -48,7 +48,7 @@ private:	// classes
 
 	private: // methods
 		// initialize a window, pass a reference inside the SDLwindow
-		void init(void); // todo: encapsulate
+		void init(void); 
 
 		friend class Tahm;
 	};
@@ -77,15 +77,15 @@ private:	// classes
 
 	private: // methods
 		// initialize renderer
-		void init(void); // todo: encapsulate
+		void init(void); 
 
 
 		// prepare a default scene to render - blank black screen
 		// called before the "draw" function
-		void prepare(void); // todo: encapsulate
+		void prepare(void); 
 
 		// present the rendered scene to the renderer
-		void present(void);	// todo: encapsulate
+		void present(void);	
 
 		friend class Tahm;
 	};
@@ -173,7 +173,7 @@ public:	// classes
 			void play();
 		
 		private:
-			void linkDevice(SDL_AudioDeviceID& device); // todo: encapsulate. Needs friend
+			void linkDevice(SDL_AudioDeviceID& device); 
 
 			friend class Audio;
 		};
@@ -185,7 +185,7 @@ public:	// classes
 		Sound* newSound(const char* path);
 
 	private:	// attributes
-		SDL_AudioDeviceID device;	// todo: encapsulate. Needs friend
+		SDL_AudioDeviceID device;	
 		SDL_AudioSpec spec;
 
 	private:	// methods
@@ -229,13 +229,13 @@ private:	// attributes
 
 private:	// methods
 	Tahm();
-	void init(void); // todo: encapsulate
+	void init(void); 
 
-	void setup();		// todod: encapsulate
-	void loop();		// todo: encapsulate
-	void handleEvents();	// todo: encapsulate
+	void setup();		
+	void loop();		
+	void handleEvents();	
 
 	// destroy window, renderer, and quit the application
-	void destroy();	// todo: encapsulate
+	void destroy();	
 	
 };
