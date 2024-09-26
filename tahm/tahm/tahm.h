@@ -23,13 +23,22 @@
 
 class Tahm {
 
-private:
-
+private:	// classes
 	// tahm's window. made up of
 	// the SDL window + methods and parameters for it
 	class Window
 	{
-	private:
+	public:  // attributes
+		SDL_Window* SDLwindow;
+
+	public:	// methods
+		// should get called in "start". passes a reference to
+		// the desired window title, width, and height,
+		// which is later used by void init to initialize a 
+		// window with the desired parameters.
+		void create(const char* title, int width, int height);
+
+	private: // attributes
 		const char* title = "Untitled";
 
 		int width = 400;
@@ -37,47 +46,36 @@ private:
 
 		int flags = 0;
 
-	public:
-		SDL_Window* SDLwindow;
-
-	public:
-
+	private: // methods
 		// initialize a window, pass a reference inside the SDLwindow
 		void init(void); // todo: encapsulate
 
-		// should get called in "start". passes a reference to the desired window title, width, and height,
-		// which is later used by void init to initialize a window with the desired parameters
-		void create(const char* title, int width, int height);
-
+		friend class Tahm;
 	};
 
 	class Input
 	{
-
 	public:
-
 		// holds a reference to the keyboard state
 		const Uint8* keyPressed = SDL_GetKeyboardState(NULL);
 	};
 
-
 	// tahm's renderer. made up of
 	// the SDL renderer + methods and parameters for it
-
 	class Renderer
 	{
-	public:
+	public:	// attributes
 		int flags = SDL_RENDERER_ACCELERATED;
 
 		// pointer that points to the engine's window
 		Window* window;
 		SDL_Renderer* SDLrenderer;
 
-	public:
-
+	public: // methods
 		// creates a reference to the game window
 		Renderer(Window& window);
 
+	private: // methods
 		// initialize renderer
 		void init(void); // todo: encapsulate
 
@@ -88,20 +86,20 @@ private:
 
 		// present the rendered scene to the renderer
 		void present(void);	// todo: encapsulate
+
+		friend class Tahm;
 	};
 
-public:
-
+public:	// classes
 	// functions and methods associated with rendering
 	// used by the developer for rendering different objects
 
 	class Graphics
 	{
-	public:
+	public:	// classes
 		class Font
 		{
-		public:
-
+		public: // methods
 			Font();
 
 			// create new font
@@ -109,7 +107,22 @@ public:
 
 		};
 
-	public:
+		// class for drawing shapes or images
+		class Draw
+		{
+		private: // attributes 
+			Renderer* renderer;
+		public:	// methods
+			Draw(Renderer& renderer);
+
+			SDL_Rect rect(int x, int y, int width, int height);
+		};
+
+	public:	// attributes
+		Draw* draw;
+		Font* font;
+
+	public: // methods
 		Graphics(Renderer& renderer);
 		~Graphics();
 
@@ -132,78 +145,57 @@ public:
 		// and the text that should be rendered
 		void printf(const char* alignment, int alignmentWidth, int marginX, int marginY, TTF_Font* font, const char* text);
 
-		// class for drawing shapes or images
-
-		class Draw
-		{
-		private:
-			Renderer* renderer;
-		public:
-			Draw(Renderer& renderer);
-
-			SDL_Rect rect(int x, int y, int width, int height);
-		};
-
-	private:
+	private:	// attributes
 		Renderer* renderer;
 
-	public:
-		Draw* draw;
-		Font* font;
-
 		// current active color
-	private:
 		Color color = { 0, 0, 0 };
+
 	};
 
-
 	// general class for audio management
-
 	class Audio
 	{
-	public:
-
+	public:	// classes
 		// class for creating sound instances
-
 		class Sound
 		{
-		private:
+		private:	// attributes
 			SDL_AudioSpec* spec;
 			Uint8* waveStart;
 			Uint32 waveLength;
 
-
 			SDL_AudioDeviceID* device;
 
-		public:
+		public:	// methods
 			Sound(const char* path, SDL_AudioSpec* spec);
 			~Sound();
 
+			void play();
+		
+		private:
 			void linkDevice(SDL_AudioDeviceID& device); // todo: encapsulate. Needs friend
 
-			void play();
+			friend class Audio;
 		};
 
-	public:
+	public:	// methods
 		Audio();
-
-		void setupDevice();
-		SDL_AudioDeviceID device;	// todo: encapsulate. Needs friend
 
 		// create a new sound
 		Sound* newSound(const char* path);
 
-	private:
+	private:	// attributes
+		SDL_AudioDeviceID device;	// todo: encapsulate. Needs friend
 		SDL_AudioSpec spec;
 
+	private:	// methods
+		void setupDevice();
+
+		friend class Tahm;
 	};
 
-
-private:
-	static Tahm* tahm;
-
-public:
-
+public:	// attributes
 	// instances to all of the nested classes
 	Window* window;
 	Input* input;
@@ -214,26 +206,35 @@ public:
 	// update & render running
 	bool running;
 
-	//callbacks
+public:	// methods
+	static Tahm& getInstance();
+
+	void run();
+
+	void initializeCallbacks(
+		void(*start)(), void(*input)(Event),
+		void(*update)(), void(*draw)()
+	);
+
+	~Tahm();
+
+private:	// attributes
+	static Tahm* tahm;
+
+	// callbacks
 	void(*start_ptr)();
 	void(*input_ptr)(Event);
 	void(*update_ptr)();
 	void(*draw_ptr)();
+	// callbacks shouldn't be allowed to be called from the outside
 
-private:
+private:	// methods
 	Tahm();
-
-public:
-	~Tahm();
-
 	void init(void); // todo: encapsulate
 
-	void run();
 	void setup();		// todod: encapsulate
 	void loop();		// todo: encapsulate
 	void handleEvents();	// todo: encapsulate
-
-	static Tahm& getInstance();
 
 	// destroy window, renderer, and quit the application
 	void destroy();	// todo: encapsulate

@@ -32,10 +32,10 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	tahm.start_ptr = start;
-	tahm.input_ptr = keypressed;
-	tahm.update_ptr = update;
-	tahm.draw_ptr = draw;
+	tahm.initializeCallbacks(
+		start, keypressed,
+		update, draw
+	);
 
 	tahm.run();
 
