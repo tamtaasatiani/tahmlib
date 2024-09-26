@@ -202,9 +202,6 @@ public:	// attributes
 	Graphics* graphics;
 	Audio* audio;
 
-	// update & render running
-	bool running;
-
 public:	// methods
 	static Tahm& getInstance();
 
@@ -226,6 +223,9 @@ private:	// attributes
 	void(*update_ptr)();
 	void(*draw_ptr)();
 	// callbacks shouldn't be allowed to be called from the outside
+
+	// update & render running
+	bool running;
 
 private:	// methods
 	Tahm();
