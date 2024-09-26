@@ -22,13 +22,13 @@
 // engine class
 
 class Tahm {
-
+	
 private:	// classes
 	// tahm's window. made up of
 	// the SDL window + methods and parameters for it
 	class Window
 	{
-	public:  // attributes
+	public: // attributes
 		SDL_Window* SDLwindow;
 
 	public:	// methods
@@ -93,7 +93,6 @@ private:	// classes
 public:	// classes
 	// functions and methods associated with rendering
 	// used by the developer for rendering different objects
-
 	class Graphics
 	{
 	public:	// classes
@@ -238,4 +237,5 @@ private:	// methods
 
 	// destroy window, renderer, and quit the application
 	void destroy();	// todo: encapsulate
+	
 };
