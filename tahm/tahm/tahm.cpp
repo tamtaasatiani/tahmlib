@@ -34,6 +34,16 @@ void Tahm::init(void)
 	audio->setupDevice();
 }
 
+void Tahm::initializeCallbacks(
+	void(*start)(), void(*input)(Event),
+	void(*update)(), void(*draw)()
+) {
+    start_ptr = start;
+    input_ptr = input;
+    update_ptr = update;
+    draw_ptr = draw;
+}
+
 Tahm& Tahm::getInstance(void)
 {
 	if (tahm == nullptr) {
@@ -111,7 +121,10 @@ void Tahm::destroy(void)
 
 Tahm::~Tahm()
 {
-	delete window, renderer;
-	delete input, graphics, audio;
+	delete window;
+	delete renderer;
+	delete input; 
+	delete graphics;
+	delete audio;
 	delete tahm;
 }

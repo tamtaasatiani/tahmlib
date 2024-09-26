@@ -32,7 +32,7 @@ void Tahm::Audio::setupDevice()
 
 	if (device == 0)
 	{
-		std::cerr << "Sound device error: " << SDL_GetError() << std::endl;
+		std::cerr << "Sound device error: " << SDL_GetError() << '\n';
 	}
 }
 
