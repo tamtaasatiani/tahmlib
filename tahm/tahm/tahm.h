@@ -43,7 +43,7 @@ private:
 	public:
 
 		// initialize a window, pass a reference inside the SDLwindow
-		void init(void);
+		void init(void); // todo: encapsulate
 
 		// should get called in "start". passes a reference to the desired window title, width, and height,
 		// which is later used by void init to initialize a window with the desired parameters
@@ -79,15 +79,15 @@ private:
 		Renderer(Window& window);
 
 		// initialize renderer
-		void init(void);
+		void init(void); // todo: encapsulate
 
 
 		// prepare a default scene to render - blank black screen
 		// called before the "draw" function
-		void prepare(void);
+		void prepare(void); // todo: encapsulate
 
 		// present the rendered scene to the renderer
-		void present(void);
+		void present(void);	// todo: encapsulate
 	};
 
 public:
@@ -179,7 +179,7 @@ public:
 			Sound(const char* path, SDL_AudioSpec* spec);
 			~Sound();
 
-			void linkDevice(SDL_AudioDeviceID& device);
+			void linkDevice(SDL_AudioDeviceID& device); // todo: encapsulate. Needs friend
 
 			void play();
 		};
@@ -188,7 +188,7 @@ public:
 		Audio();
 
 		void setupDevice();
-		SDL_AudioDeviceID device;
+		SDL_AudioDeviceID device;	// todo: encapsulate. Needs friend
 
 		// create a new sound
 		Sound* newSound(const char* path);
@@ -226,15 +226,15 @@ private:
 public:
 	~Tahm();
 
-	void init(void);
+	void init(void); // todo: encapsulate
 
 	void run();
-	void setup();
-	void loop();
-	void handleEvents();
+	void setup();		// todod: encapsulate
+	void loop();		// todo: encapsulate
+	void handleEvents();	// todo: encapsulate
 
 	static Tahm& getInstance();
 
 	// destroy window, renderer, and quit the application
-	void destroy();
+	void destroy();	// todo: encapsulate
 };
