@@ -148,7 +148,9 @@ public:	// classes
 		Renderer* renderer;
 
 		// current active color
-		Color color = { 0, 0, 0 };
+	private:
+		Color color = { 0, 0, 0 , 255}; // all four attributes must be defined
+	};
 
 	};
 

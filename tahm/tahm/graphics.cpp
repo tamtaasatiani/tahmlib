@@ -1,4 +1,5 @@
 #include "seek.h"
+#include "utils.h"
 
 
 /*
@@ -28,7 +29,8 @@ Tahm::Graphics::Graphics(Renderer& renderer)
 
 Tahm::Graphics::~Graphics()
 {
-	delete font, draw;
+	delete font;
+	delete draw;
 }
 
 
@@ -43,8 +45,8 @@ void Tahm::Graphics::setColor(int r, int g, int b, int a)
 	SDL_SetRenderDrawColor(this->renderer->SDLrenderer, r, g, b, a);
 
 	// convert to char
-	unsigned char cr = r, cg = g, cb = b;
-	color = { cr, cg, cb };
+	unsigned char cr = r, cg = g, cb = b, ca = a;
+	color = { cr, cg, cb , ca};
 }
 
 
@@ -67,21 +69,21 @@ void Tahm::Graphics::printf(const char* alignment, int alignmentWidth, int margi
 
 	SDL_Rect destination;
 
-	if (alignment == "left")
+	if (compareStrings(alignment, "left"))
 	{
 		destination = { marginX, marginY, renderedText->w, renderedText->h };
 	}
-	else if (alignment == "center")
+	else if (compareStrings(alignment, "center"))
 	{
 		destination = { alignmentWidth / 2 - renderedText->w / 2 + marginX, marginY, renderedText->w, renderedText->h };
 	}
-	else if (alignment == "right")
+	else if (compareStrings(alignment, "right"))
 	{
 		destination = { alignmentWidth - renderedText->w + marginX, marginY, renderedText->w, renderedText->h };
 	}
 	else
 	{
-		std::cerr << "Invalid alignment!" << std::endl;
+		std::cerr << "Invalid alignment!" << '\n';
 	}
 
 

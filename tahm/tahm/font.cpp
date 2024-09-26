@@ -21,7 +21,7 @@ Tahm::Graphics::Font::Font(void)
 
 	if (TTF_Init() < 0)
 	{
-		std::cerr << "Error initializing SDL_ttf: " << TTF_GetError() << std::endl;
+		std::cerr << "Error initializing SDL_ttf: " << TTF_GetError() << '\n';
 	}
 }
 
@@ -30,8 +30,9 @@ TTF_Font* Tahm::Graphics::Font::newFont(const char* path, int size)
 {
 	TTF_Font* font = TTF_OpenFont(path, size);
 
-	if (!font) {
-		std::cerr << "Failed to load font: " << TTF_GetError() << std::endl;
+	if (!font)
+	{
+		std::cerr << "Failed to load font: " << TTF_GetError() << '\n';
 	}
 
 	return font;
