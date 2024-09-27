@@ -147,3 +147,20 @@ void update()
 
 <br/>
 
+
+
+---
+
+# Linux
+
+## Pre-requisites
+
+```bash
+# Arch Linux
+sudo pacman -S meson sdl2 sdl2_ttf base-devel
+```
+
+```bash
+chmod +x run.sh
+./run.sh
+```
